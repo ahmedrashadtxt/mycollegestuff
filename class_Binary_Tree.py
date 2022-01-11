@@ -53,3 +53,21 @@ def traverse_postorder(root):
     print(root.data,end=" ")
 
 traverse_postorder(root)
+
+print()
+
+def traverse_levelorder(root):
+  queue = []
+  queue.append(root)
+
+  while(queue != []):
+    node = queue.pop(0)
+    print(node.data, end=" ")
+
+    if(node.left != None):
+      queue.append(node.left)
+
+    if(node.right != None):
+      queue.append(node.right)
+
+traverse_levelorder(root)
